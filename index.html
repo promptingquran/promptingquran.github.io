@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prompting the Qur’an — Project Page</title>
+  <meta name="description" content="AI interactions with the Qur’an: methods and preliminary findings on style, sources, certainty, and exegetical perspective." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;650&family=Source+Serif+4:wght@500;650&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="container header">
+    <div class="topline">
+      <div class="badge">Project page · working paper in preparation</div>
+      <div class="meta">Last updated: <span id="last-updated">2025-12-27</span></div>
+    </div>
+
+    <h1>Prompting the Qur’an</h1>
+    <p class="subtitle">AI Interactions with the Sacred Text</p>
+
+    <p class="lede">
+      We systematically analyze how large language models answer Qur’an-related questions across
+      languages and prompt styles, focusing on style, sources, certainty, and exegetical perspective.
+    </p>
+
+    <div class="cta">
+      <a class="btn primary" href="#methodology">Methodology</a>
+      <a class="btn primary" href="#findings">Key findings</a>
+      <a class="btn primary" href="#guidelines">Normative guidelines</a>
+      <a class="btn primary" href="#authors">Authors</a>        
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="research-question" class="section">
+      <h2>Research question</h2>
+      <p>
+        Which substantive and methodological preferences can be observed in AI-generated answers to
+        Qur’an-related questions, with regard to style, use of sources, and exegetical perspective?
+      </p>
+      <div class="callout">
+        <strong>Why this matters:</strong> LLMs are increasingly used for religious Q&amp;A. For the Qur’an,
+        this raises questions of authority, interpretation, and bias.
+      </div>
+    </section>
+
+    <section id="methodology" class="section">
+      <h2>Methodology</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Study design</h3>
+          <ul>
+            <li>Five major Qur’anic themes (God, Human, Action, Knowledge, Hereafter)</li>
+            <li>Four questions per theme</li>
+            <li>Three languages: English, German, Turkish</li>
+            <li>Two prompt styles: non-technical vs technical (Arabic terms)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Data collection</h3>
+          <ul>
+            <li>~500 prompts via automated browser interaction</li>
+            <li>Separate private chat per prompt</li>
+            <li>Simulated natural typing to match end-user experience</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Annotation &amp; evaluation</h3>
+          <p>
+            Expert evaluation via a custom Shiny web app with standardized parameters and fixed
+            category options to ensure reproducible annotation.
+          </p>
+          <button class="linklike" data-toggle="params">Show evaluation parameters</button>
+          <div class="hidden" id="params">
+            <ul class="params">
+              <li><strong>Style:</strong> analytical · narrative · abstract · exegetical · practical</li>
+              <li><strong>Inclusivity:</strong> exclusive Muslim · universal human · interfaith inclusive</li>
+              <li><strong>Certainty:</strong> definitive · tentative · open-ended</li>
+              <li><strong>Sources:</strong> Qur’an · Hadith · secondary literature · none</li>
+              <li><strong>Exegetical perspective:</strong> traditional/hadith-based · rational · philosophical · socio-political · mystical · feminist · linguistic/philological · normative/jurisprudential · scientific</li>
+              <li><strong>Hermeneutic strategy:</strong> direct citation · paraphrase · analogy · rational argument</li>
+              <li><strong>Contextualization:</strong> text-only · historical/social context</li>
+              <li><strong>Theme alignment:</strong> on theme · blends themes · diverges</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="findings" class="section">
+      <h2>Key findings (preliminary)</h2>
+
+      <div class="grid two">
+        <figure class="card">
+          <img src="assets/fig-exegetical.png" alt="Distribution of exegetical perspectives" />
+          <figcaption>Distribution of exegetical perspectives (coded master table).</figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="assets/fig-chi2.png" alt="Chi-square residual heatmap for associations" />
+          <figcaption>χ² residuals: blue less than expected, red more than expected.</figcaption>
+        </figure>
+      </div>
+
+      <div class="card">
+        <h3>High-level tendencies</h3>
+        <ul>
+          <li>Answers are predominantly analytical in style.</li>
+          <li>Qur’an references are frequent; Hadith references are rare; secondary sources appear in a minority.</li>
+          <li>Definitive tone dominates; tentative answers are relatively rare.</li>
+          <li>Rational and traditional/hadith-based perspectives appear most frequently; others are marginal.</li>
+        </ul>
+        <p class="note">
+          Note: This site summarizes the talk. The full paper and full statistical reporting are in preparation.
+        </p>
+      </div>
+    </section>
+
+    <section id="guidelines" class="section">
+      <h2>Normative guidelines (summary)</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Recognize textual anchoring:</strong> check whether certainty is text-based or inflated by model tendencies.</li>
+          <li><strong>Handle rational/contextual answers with care:</strong> plurality isn’t automatically “weak.”</li>
+          <li><strong>Be theme-sensitive:</strong> expectations differ by doctrinal vs ethical/modern topics.</li>
+          <li><strong>Compensate under-representation:</strong> supplement with Hadith and scholarly works to avoid reductionism.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="authors" class="section">
+      <h2>Authors &amp; contact</h2>
+
+      <div class="grid two">
+        <div class="card author-card">
+          <div class="author-header">
+            <img src="assets/ibrahim.jpg"
+                alt="Portrait of Dr. Ibrahim Talha Aslandur"
+                class="author-photo" />
+            <div>
+              <h3>Dr. Ibrahim Aslandur</h3>
+              <p class="role">Researcher in Religious Education &amp; Qur’anic Studies</p>
+            </div>
+          </div>
+
+          <p>
+            <a href="mailto:ibrahim.aslandur02@ph-karlsruhe.de">
+              ibrahim.aslandur02@ph-karlsruhe.de
+            </a>
+          </p>
+          <p>
+            <a href="https://www.ph-karlsruhe.de/personen/detail/Ibrahim%20Talha_Aslandur_6226"
+              target="_blank" rel="noopener">
+              Academic profile (University of Education Karlsruhe)
+            </a>
+          </p>
+        </div>
+
+        <div class="card author-card">
+          <div class="author-header">
+            <img src="assets/arif.png"
+                alt="Portrait of Dr. Arif Dönmez"
+                class="author-photo" />
+            <div>
+              <h3>Dr. Arif Dönmez</h3>
+              <p class="role">Interdisciplinary AI Researcher</p>
+            </div>
+          </div>
+
+          <p>
+            <a href="mailto:arif.doenmez@ruhr-uni-bochum.de">
+              arif.doenmez@ruhr-uni-bochum.de
+            </a>
+          </p>
+          <p>
+            <a href="https://arifdoenmez.github.io?"
+              target="_blank" rel="noopener">
+              Personal website (projects &amp; publications)
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer card">
+        <p class="small">
+          Citation suggestion (until preprint): Aslandur, I. T., &amp; Dönmez, A.
+          “Prompting the Qur’an: AI Interactions with the Sacred Text.”
+          Project page, 2025. (Working paper in preparation.)
+        </p>
+      </div>
+    </section>
+
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
